@@ -1,0 +1,1059 @@
+{
+ "description": "固定裁决 fixture：三层折射结构（0-10/10-25/25-50 m），剖面 A 有效 0-9000 ms，B 有效 10000-20000 ms，空档 ping t=9500；交叉点 ping t=8600；关键对比 ping t=5000。",
+ "profiles": [
+  {
+   "id": "SVP-A",
+   "name": "剖面 A（上午）",
+   "validStart": 0,
+   "validEnd": 9000,
+   "nodes": [
+    {
+     "depth": 0,
+     "c": 1480.0,
+     "ord": 0
+    },
+    {
+     "depth": 10,
+     "c": 1475.0,
+     "ord": 1
+    },
+    {
+     "depth": 25,
+     "c": 1500.0,
+     "ord": 2
+    },
+    {
+     "depth": 50,
+     "c": 1510.0,
+     "ord": 3
+    }
+   ]
+  },
+  {
+   "id": "SVP-B",
+   "name": "剖面 B（下午）",
+   "validStart": 10000,
+   "validEnd": 20000,
+   "nodes": [
+    {
+     "depth": 0,
+     "c": 1485.0,
+     "ord": 0
+    },
+    {
+     "depth": 10,
+     "c": 1480.0,
+     "ord": 1
+    },
+    {
+     "depth": 25,
+     "c": 1505.0,
+     "ord": 2
+    },
+    {
+     "depth": 50,
+     "c": 1515.0,
+     "ord": 3
+    }
+   ]
+  }
+ ],
+ "attitude": [
+  {
+   "id": "L1-A00",
+   "line": "L1",
+   "t": 0,
+   "roll": -6,
+   "pitch": 0.0,
+   "heading": 0.0,
+   "ord": 0
+  },
+  {
+   "id": "L1-A01",
+   "line": "L1",
+   "t": 4000,
+   "roll": -2,
+   "pitch": 0.0,
+   "heading": 0.0,
+   "ord": 1
+  },
+  {
+   "id": "L1-A02",
+   "line": "L1",
+   "t": 8000,
+   "roll": 2,
+   "pitch": 0.0,
+   "heading": 0.0,
+   "ord": 2
+  },
+  {
+   "id": "L1-A03",
+   "line": "L1",
+   "t": 12000,
+   "roll": -6,
+   "pitch": 0.0,
+   "heading": 0.0,
+   "ord": 3
+  },
+  {
+   "id": "L1-A04",
+   "line": "L1",
+   "t": 16000,
+   "roll": 2,
+   "pitch": 0.0,
+   "heading": 0.0,
+   "ord": 4
+  },
+  {
+   "id": "L1-A05",
+   "line": "L1",
+   "t": 20000,
+   "roll": 0,
+   "pitch": 0.0,
+   "heading": 0.0,
+   "ord": 5
+  },
+  {
+   "id": "L2-A00",
+   "line": "L2",
+   "t": 0,
+   "roll": -5,
+   "pitch": 0.0,
+   "heading": 90.0,
+   "ord": 0
+  },
+  {
+   "id": "L2-A01",
+   "line": "L2",
+   "t": 4000,
+   "roll": -1,
+   "pitch": 0.0,
+   "heading": 90.0,
+   "ord": 1
+  },
+  {
+   "id": "L2-A02",
+   "line": "L2",
+   "t": 8000,
+   "roll": 3,
+   "pitch": 0.0,
+   "heading": 90.0,
+   "ord": 2
+  },
+  {
+   "id": "L2-A03",
+   "line": "L2",
+   "t": 12000,
+   "roll": -5,
+   "pitch": 0.0,
+   "heading": 90.0,
+   "ord": 3
+  },
+  {
+   "id": "L2-A04",
+   "line": "L2",
+   "t": 16000,
+   "roll": 3,
+   "pitch": 0.0,
+   "heading": 90.0,
+   "ord": 4
+  },
+  {
+   "id": "L2-A05",
+   "line": "L2",
+   "t": 20000,
+   "roll": 1,
+   "pitch": 0.0,
+   "heading": 90.0,
+   "ord": 5
+  }
+ ],
+ "beamSamples": [
+  {
+   "id": "L1-P00-B0",
+   "line": "L1",
+   "pingT": 1000,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L1-P00-B1",
+   "line": "L1",
+   "pingT": 1000,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P00-B2",
+   "line": "L1",
+   "pingT": 1000,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L1-P00-B3",
+   "line": "L1",
+   "pingT": 1000,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P00-B4",
+   "line": "L1",
+   "pingT": 1000,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L1-P01-B0",
+   "line": "L1",
+   "pingT": 3000,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L1-P01-B1",
+   "line": "L1",
+   "pingT": 3000,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P01-B2",
+   "line": "L1",
+   "pingT": 3000,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L1-P01-B3",
+   "line": "L1",
+   "pingT": 3000,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P01-B4",
+   "line": "L1",
+   "pingT": 3000,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L1-P02-B0",
+   "line": "L1",
+   "pingT": 5000,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L1-P02-B1",
+   "line": "L1",
+   "pingT": 5000,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P02-B2",
+   "line": "L1",
+   "pingT": 5000,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L1-P02-B3",
+   "line": "L1",
+   "pingT": 5000,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P02-B4",
+   "line": "L1",
+   "pingT": 5000,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L1-P03-B0",
+   "line": "L1",
+   "pingT": 7000,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L1-P03-B1",
+   "line": "L1",
+   "pingT": 7000,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P03-B2",
+   "line": "L1",
+   "pingT": 7000,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L1-P03-B3",
+   "line": "L1",
+   "pingT": 7000,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P03-B4",
+   "line": "L1",
+   "pingT": 7000,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L1-P04-B0",
+   "line": "L1",
+   "pingT": 8600,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L1-P04-B1",
+   "line": "L1",
+   "pingT": 8600,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P04-B2",
+   "line": "L1",
+   "pingT": 8600,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L1-P04-B3",
+   "line": "L1",
+   "pingT": 8600,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P04-B4",
+   "line": "L1",
+   "pingT": 8600,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L1-P05-B0",
+   "line": "L1",
+   "pingT": 9500,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L1-P05-B1",
+   "line": "L1",
+   "pingT": 9500,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P05-B2",
+   "line": "L1",
+   "pingT": 9500,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L1-P05-B3",
+   "line": "L1",
+   "pingT": 9500,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P05-B4",
+   "line": "L1",
+   "pingT": 9500,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L1-P06-B0",
+   "line": "L1",
+   "pingT": 11000,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L1-P06-B1",
+   "line": "L1",
+   "pingT": 11000,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P06-B2",
+   "line": "L1",
+   "pingT": 11000,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L1-P06-B3",
+   "line": "L1",
+   "pingT": 11000,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P06-B4",
+   "line": "L1",
+   "pingT": 11000,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L1-P07-B0",
+   "line": "L1",
+   "pingT": 13000,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L1-P07-B1",
+   "line": "L1",
+   "pingT": 13000,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P07-B2",
+   "line": "L1",
+   "pingT": 13000,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L1-P07-B3",
+   "line": "L1",
+   "pingT": 13000,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P07-B4",
+   "line": "L1",
+   "pingT": 13000,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L1-P08-B0",
+   "line": "L1",
+   "pingT": 15000,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L1-P08-B1",
+   "line": "L1",
+   "pingT": 15000,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P08-B2",
+   "line": "L1",
+   "pingT": 15000,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L1-P08-B3",
+   "line": "L1",
+   "pingT": 15000,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P08-B4",
+   "line": "L1",
+   "pingT": 15000,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L1-P09-B0",
+   "line": "L1",
+   "pingT": 17000,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L1-P09-B1",
+   "line": "L1",
+   "pingT": 17000,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P09-B2",
+   "line": "L1",
+   "pingT": 17000,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L1-P09-B3",
+   "line": "L1",
+   "pingT": 17000,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P09-B4",
+   "line": "L1",
+   "pingT": 17000,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L1-P10-B0",
+   "line": "L1",
+   "pingT": 19000,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L1-P10-B1",
+   "line": "L1",
+   "pingT": 19000,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P10-B2",
+   "line": "L1",
+   "pingT": 19000,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L1-P10-B3",
+   "line": "L1",
+   "pingT": 19000,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L1-P10-B4",
+   "line": "L1",
+   "pingT": 19000,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P00-B0",
+   "line": "L2",
+   "pingT": 1000,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P00-B1",
+   "line": "L2",
+   "pingT": 1000,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P00-B2",
+   "line": "L2",
+   "pingT": 1000,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L2-P00-B3",
+   "line": "L2",
+   "pingT": 1000,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P00-B4",
+   "line": "L2",
+   "pingT": 1000,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P01-B0",
+   "line": "L2",
+   "pingT": 3000,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P01-B1",
+   "line": "L2",
+   "pingT": 3000,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P01-B2",
+   "line": "L2",
+   "pingT": 3000,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L2-P01-B3",
+   "line": "L2",
+   "pingT": 3000,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P01-B4",
+   "line": "L2",
+   "pingT": 3000,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P02-B0",
+   "line": "L2",
+   "pingT": 5000,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P02-B1",
+   "line": "L2",
+   "pingT": 5000,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P02-B2",
+   "line": "L2",
+   "pingT": 5000,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L2-P02-B3",
+   "line": "L2",
+   "pingT": 5000,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P02-B4",
+   "line": "L2",
+   "pingT": 5000,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P03-B0",
+   "line": "L2",
+   "pingT": 7000,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P03-B1",
+   "line": "L2",
+   "pingT": 7000,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P03-B2",
+   "line": "L2",
+   "pingT": 7000,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L2-P03-B3",
+   "line": "L2",
+   "pingT": 7000,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P03-B4",
+   "line": "L2",
+   "pingT": 7000,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P04-B0",
+   "line": "L2",
+   "pingT": 8600,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P04-B1",
+   "line": "L2",
+   "pingT": 8600,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P04-B2",
+   "line": "L2",
+   "pingT": 8600,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L2-P04-B3",
+   "line": "L2",
+   "pingT": 8600,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P04-B4",
+   "line": "L2",
+   "pingT": 8600,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P05-B0",
+   "line": "L2",
+   "pingT": 9500,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P05-B1",
+   "line": "L2",
+   "pingT": 9500,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P05-B2",
+   "line": "L2",
+   "pingT": 9500,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L2-P05-B3",
+   "line": "L2",
+   "pingT": 9500,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P05-B4",
+   "line": "L2",
+   "pingT": 9500,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P06-B0",
+   "line": "L2",
+   "pingT": 11000,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P06-B1",
+   "line": "L2",
+   "pingT": 11000,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P06-B2",
+   "line": "L2",
+   "pingT": 11000,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L2-P06-B3",
+   "line": "L2",
+   "pingT": 11000,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P06-B4",
+   "line": "L2",
+   "pingT": 11000,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P07-B0",
+   "line": "L2",
+   "pingT": 13000,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P07-B1",
+   "line": "L2",
+   "pingT": 13000,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P07-B2",
+   "line": "L2",
+   "pingT": 13000,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L2-P07-B3",
+   "line": "L2",
+   "pingT": 13000,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P07-B4",
+   "line": "L2",
+   "pingT": 13000,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P08-B0",
+   "line": "L2",
+   "pingT": 15000,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P08-B1",
+   "line": "L2",
+   "pingT": 15000,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P08-B2",
+   "line": "L2",
+   "pingT": 15000,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L2-P08-B3",
+   "line": "L2",
+   "pingT": 15000,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P08-B4",
+   "line": "L2",
+   "pingT": 15000,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P09-B0",
+   "line": "L2",
+   "pingT": 17000,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P09-B1",
+   "line": "L2",
+   "pingT": 17000,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P09-B2",
+   "line": "L2",
+   "pingT": 17000,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L2-P09-B3",
+   "line": "L2",
+   "pingT": 17000,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P09-B4",
+   "line": "L2",
+   "pingT": 17000,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P10-B0",
+   "line": "L2",
+   "pingT": 19000,
+   "beamIdx": 0,
+   "mountAngle": -60.0,
+   "twtt": 0.131300661
+  },
+  {
+   "id": "L2-P10-B1",
+   "line": "L2",
+   "pingT": 19000,
+   "beamIdx": 1,
+   "mountAngle": -30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P10-B2",
+   "line": "L2",
+   "pingT": 19000,
+   "beamIdx": 2,
+   "mountAngle": 0.0,
+   "twtt": 0.064519163
+  },
+  {
+   "id": "L2-P10-B3",
+   "line": "L2",
+   "pingT": 19000,
+   "beamIdx": 3,
+   "mountAngle": 30.0,
+   "twtt": 0.074635641
+  },
+  {
+   "id": "L2-P10-B4",
+   "line": "L2",
+   "pingT": 19000,
+   "beamIdx": 4,
+   "mountAngle": 60.0,
+   "twtt": 0.131300661
+  }
+ ],
+ "crossing": {
+  "pingT": 8600,
+  "line1": "L1",
+  "line2": "L2",
+  "alongM": 50.0
+ }
+}

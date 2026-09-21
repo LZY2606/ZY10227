@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>声速测深裁决台</title>
+<style>
+  :root { --ink:#16202c; --mut:#5a6b7d; --line:#cdd8e3; --bg:#eef3f8; --card:#ffffff;
+          --ac:#1565c0; --bad:#c62828; --warn:#e8890c; --ok:#2e7d32; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+         color:var(--ink); background:var(--bg); }
+  header { background:#0d2440; color:#fff; padding:14px 22px; }
+  header h1 { margin:0; font-size:20px; letter-spacing:2px; }
+  header p { margin:4px 0 0; color:#b8c8da; font-size:12.5px; }
+  .wrap { display:grid; grid-template-columns:300px 1fr; gap:14px; padding:14px 22px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px; }
+  .card h2 { font-size:14px; margin:0 0 10px; padding-bottom:6px; border-bottom:1px solid var(--line); }
+  label { display:block; font-size:12px; color:var(--mut); margin:8px 0 3px; }
+  input,select,button { font:inherit; font-size:13px; }
+  input[type=number],input[type=text],select { width:100%; padding:5px 7px; border:1px solid var(--line); border-radius:6px; }
+  button { cursor:pointer; border:none; border-radius:7px; padding:7px 12px; background:var(--ac); color:#fff; }
+  button.ghost { background:#fff; color:var(--ac); border:1px solid var(--ac); }
+  button.danger { background:#8a1c1c; }
+  .row { display:flex; gap:8px; align-items:center; }
+  .muted { color:var(--mut); font-size:12px; }
+  .prof { border:1px solid var(--line); border-radius:8px; padding:8px; margin:8px 0; }
+  .prof b { font-size:12.5px; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+  .svgs { display:grid; grid-template-rows:auto auto; gap:14px; }
+  svg { width:100%; height:auto; background:#fbfdff; border:1px solid var(--line); border-radius:8px; }
+  table { border-collapse:collapse; width:100%; font-size:12px; }
+  th,td { border-bottom:1px solid #e3eaf1; padding:4px 6px; text-align:right; white-space:nowrap; }
+  th { color:var(--mut); font-weight:600; background:#f5f8fb; position:sticky; top:0; }
+  td.l,th.l { text-align:left; }
+  .tag { display:inline-block; padding:1px 7px; border-radius:10px; font-size:11px; }
+  .OK { background:#e4f3e5; color:var(--ok); }
+  .EXCLUDED_ANGLE { background:#fff3e0; color:var(--warn); }
+  .NO_PROFILE,.NO_ATTITUDE { background:#eceff1; color:#546e7a; }
+  .SOLVE_FAILED { background:#fdecea; color:var(--bad); }
+  .tabs { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:8px; }
+  .tabs button { background:#e7eef6; color:var(--ink); padding:5px 10px; }
+  .tabs button.on { background:var(--ac); color:#fff; }
+  .tablewrap { max-height:330px; overflow:auto; }
+  .legend { font-size:11.5px; color:var(--mut); display:flex; gap:14px; flex-wrap:wrap; margin-top:4px; }
+  .legend i { font-style:normal; display:inline-block; width:18px; height:3px; vertical-align:middle; margin-right:4px; }
+  #msg { font-size:12px; color:var(--bad); min-height:16px; margin-top:6px; white-space:pre-wrap; }
+  .stat { display:inline-block; margin-right:14px; font-size:12.5px; }
+  .stat b { font-size:15px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>声速测深裁决台</h1>
+  <p>分层声速射线积分 · 多剖面时段与姿态延迟对齐方案并存 · 失败显式报告，绝不回退平均声速</p>
+</header>
+<div class="wrap">
+  <div>
+    <div class="card">
+      <h2>剖面有效时段</h2>
+      <div id="profiles"></div>
+      <p class="muted" id="desc"></p>
+      <button class="ghost" id="saveWin">保存剖面时段</button>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h2>新建裁决方案</h2>
+      <label>方案名称</label>
+      <input type="text" id="label" placeholder="例如：姿态延迟 +600ms">
+      <div class="grid2">
+        <div><label>姿态时延 (ms)</label><input type="number" id="delay" value="0" step="50"></div>
+        <div><label>波束角限制 (°)</label><input type="number" id="maxAng" value="65" min="1" max="90" step="0.5"></div>
+      </div>
+      <label>数值积分容差 (秒，单程)</label>
+      <input type="number" id="tol" value="1e-9" step="1e-10">
+      <label class="muted" style="margin-top:8px">参与本方案的剖面时段（可裁剪，时段间空档不插值）</label>
+      <div id="runWindows"></div>
+      <div style="margin-top:10px" class="row">
+        <button id="run">执行裁决</button>
+        <button class="ghost" id="pair">生成 0/+600ms 对照</button>
+      </div>
+      <div id="msg"></div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h2>数据与复核</h2>
+      <button class="ghost" id="export">导出运行记录 JSON</button>
+      <button class="danger" id="reimport" style="margin-left:8px">清空数据库并重导 fixture</button>
+    </div>
+  </div>
+
+  <div class="svgs">
+    <div class="card">
+      <h2>剖面分层与波束射线（断面视图）</h2>
+      <div id="svgProfile"></div>
+      <div class="legend">
+        <span><i style="background:#1565c0"></i>成功声线</span>
+        <span><i style="background:#c62828"></i>求解失败（超出剖面深度等）</span>
+        <span><i style="background:#e8890c"></i>角度排除</span>
+        <span><i style="background:#90a4ae"></i>空档/无姿态</span>
+        <span><i style="background:#7e57c2"></i>海底点</span>
+      </div>
+    </div>
+    <div class="card">
+      <h2>海底点带与相邻条带交叉差（平面视图）</h2>
+      <div id="svgPlan"></div>
+      <div id="crossInfo" style="margin-top:6px"></div>
+    </div>
+    <div class="card">
+      <h2>方案与海底点明细</h2>
+      <div class="tabs" id="runTabs"></div>
+      <div id="summary" style="margin-bottom:8px"></div>
+      <div class="tablewrap"><table id="sndTable"></table></div>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
