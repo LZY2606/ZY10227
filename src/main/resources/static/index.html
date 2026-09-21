@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>声速测深裁决台</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header>
+  <h1>声速测深裁决台</h1>
+  <p>分层声速射线积分 · 姿态时标对齐 · 相邻条带交叉差</p>
+</header>
+
+<main>
+  <section class="panel controls">
+    <h2>裁决方案</h2>
+    <label>剖面有效时段
+      <select id="profileSelect"></select>
+    </label>
+    <label>姿态对齐版本
+      <select id="attitudeSelect"></select>
+    </label>
+    <label>排除 |校正波束角| 大于
+      <input id="maxAngle" type="number" min="1" max="90" step="0.5" value="60">
+      度
+    </label>
+    <button id="runButton">重放裁决</button>
+    <button id="replayButton" class="secondary">清空并重新导入 fixture</button>
+    <a id="exportLink" class="button secondary disabled" href="#" aria-disabled="true">导出运行记录 CSV</a>
+  </section>
+
+  <section class="panel status-panel">
+    <h2>裁决状态</h2>
+    <div id="statusSummary" class="summary-grid"></div>
+    <p id="statusMessage" class="message"></p>
+  </section>
+
+  <section class="panel">
+    <h2>剖面分层与折射结构</h2>
+    <svg id="profileSvg" viewBox="0 0 420 330" role="img"></svg>
+    <div id="profileLegend" class="legend"></div>
+  </section>
+
+  <section class="panel wide">
+    <h2>波束射线与海底点带</h2>
+    <svg id="raySvg" viewBox="0 0 1120 430" role="img"></svg>
+  </section>
+
+  <section class="panel wide">
+    <h2>与相邻条带的交叉差</h2>
+    <div class="table-wrap">
+      <table id="crossTable">
+        <thead>
+        <tr>
+          <th>左样本</th><th>右样本</th><th>左 Ping</th><th>右 Ping</th>
+          <th>水平间距 m</th><th>深度差 m</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel wide">
+    <h2>样本溯源</h2>
+    <div class="table-wrap">
+      <table id="sampleTable">
+        <thead>
+        <tr>
+          <th>波束样本</th><th>Ping</th><th>状态</th><th>原始角°</th><th>校正角°</th>
+          <th>深度 m</th><th>东向 m</th><th>容差 s</th><th>迭代</th><th>经过分层</th><th>姿态输入</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>

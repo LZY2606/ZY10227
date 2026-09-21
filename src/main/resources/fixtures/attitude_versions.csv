@@ -1,0 +1,3 @@
+id,name,delay_millis
+V0,标称时标,0
+V250,姿态延迟+250ms,250
